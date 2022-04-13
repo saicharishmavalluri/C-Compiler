@@ -9,13 +9,13 @@ cstring
 
 
 Files:
-Makefile (modified) - creates executable file for main.cpp and documentation for developers
-main.cpp (modified) - file with source code related to part0 project
-part1.cpp (new) - files with source code related to part1 project
-tokens.h (new) - header file for the ascii values of the token and token attributes
-lexer.l (new) - flex file to define patterns and their actions
-part2.y (new) - Bison file that contains the context free grammar
-developers.tex (modified) - explanation of purpose of each source file
+Makefile - creates executable file for main.cpp and documentation for developers
+main.cpp - file with source code related to part0 project
+part1.cpp - files with source code related to part1 project
+tokens.h - header file for the ascii values of the token and token attributes
+lexer.l - flex file to define patterns and their actions
+grammar.y - Bison file that contains the context free grammar
+developers.tex - explanation of purpose of each source file
 
 Steps:
 1 : First, need to run the Makefile - can run with command 'make' or './Makefile'
