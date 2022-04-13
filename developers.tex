@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\title{Welcome to My Compiler}
+\author{Sai Charishma Valluri}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This document describes the purpose of each source file, the main data structures used, 
+and a high-level overview of how the code works.
+
+\section{Project - Part0}
+This section deals with:
+\begin{itemize}
+  \item Initializing or getting ready the outline of the complier
+
+  \item main.cpp: This source file takes the input of the command line and gives outputs 
+  	or error messages based on the given command.
+	
+  \item a README.md file on how to build the compiler.
+
+\end{itemize}
+
+\section{Project - Part1}
+This phase takes the modified source code as input files and breaks these syntaxes 
+into a series of tokens by ignoring any whitespaces or comments in the source code.
+\newline part1.cpp and lexer.l deals with the actual implementation of part1 project.
+\begin{itemize}
+  \item On a high level, part1.cpp takes the tokens from the lexer.l file and displays an appropriate message.
+  \item main.cpp is same as in part0, except the intake of multiple input files 
+  \item a README.md file on how to build the compiler.
+  \item part1 requirements are implemented as below:
+  \begin{itemize}
+    \item Initially, taking all the token names from token table, and giving ASCII values to them in tokens.h file.
+    \item As per token table, giving regular expressions for lexemes.
+    \item used state condition to implement C-style comments, C++ style comments, \#include, \#define and \#ifdef.
+    \item all the errors and warning messages are given to the standard error.
+    \item NOTE: \#include, \#define, \#undef,\#ifdef, \#ifndef, \#else, \#endif were ignored and gives respective warning message.
+  \end{itemize}
+\end{itemize}
+\section{Project - Part2}
+This phase takes the modified source code as input files and displays the variable declarations, functions parameters and return types as the ouput.
+\newline parts.cpp and part2.y deals with the actual implementation of part2 project.
+\begin{itemize}
+  \item On a high level, part2.y should take the tokens from the lexer.l file and applies specific grammar based on the structure of the input.
+  \item main.cpp is same as in part0.
+  \item a README.md file on how to build the compiler.
+  \item part2 requirements are partially implemented as below:
+  \begin{itemize}
+    \item Initially, defined the grammar as per the section 2 of the given requirement.
+    \item Based on the structure of the input, if there are no syntax errors, the program should display the details of functions and variables.
+    \item used \%left and \%right for the associativity and precedence. 
+    \item all the errors and warning messages are given to the standard error.
+    \item NOTE: Only the grammar part is implemented for part2, with 48 shift/reduce conflicts.
+  \end{itemize}
+\end{itemize}
+\end{document}
